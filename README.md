@@ -1,4 +1,1 @@
-# tomoztoday
-test 1
-
-So excited to work on this project!
+Tomorrow and Today is a customized discovery platform for art and design events in East London.
