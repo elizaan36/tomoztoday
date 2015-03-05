@@ -35,6 +35,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <!--Subscribe to newsletter (access from mail icon in header) -->
 </head>
 <body>
   <div class="contact-wrapper">
@@ -66,13 +67,125 @@
       </div>
     </div>
   </div>
-<div id="outer-wrapper">
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="logo">
-          <a href="..."><img src="..." width="" height="">
+  
+  <!--Navigation-->
+<nav id="mobile-navigation" class="mobile-nav">
+  <!--MOBILE -->
+  <div class="nav-wrapper" data-content-field="navigation-mobileNav">
+    <ul>
+      <li class=>
+        <a href="/">Home</a>
+      </li>
+      <li class>
+        <a href="/blog/">Blog</a>
+      </li>
+      <li class>
+        <a href="/contact/">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="opacity-overlay"></div>
+
+<!--Not entirely sure about this bit 
+<div class="outer-wrapper">
+  
+    ::before
+    <div id="mobile-header">
+      <a class="icon-menu" id="mobileMenu"></a>
+<! comment the space between elements because science 
+          >
+    <div class="site-title-wrapper">
+    <h1 data-content-field="site-title" class="site-title">
+    <a href="/" class="home-link"> Tomorrow & Today</a>
+    </h1>
+    </div>
+  <! comment the space between elements because science 
+              >
+      <div class="info-email-wrapper">
+        <a id="info-mobile" class="icon-info">
+          <span class="icon-text">Info</span>
+        </a>
+        <div id="email-mobile">
+        <a class="icon-email">
+          <span class="icon-text">Email</span>
+        </a>
+        </div>
+        <div id="search-mobile">
+        <a class="icon-search" href="/search" data-source="template">
+          <span class="icon-text">Search</span>
+        </a>
+        </div>
+
+      </div>
+    </div>
+  
+</div> -->
+
+
+<!--main navigation -->
+<header id="header">
+  <nav class="main-nav">
+   <!-- <div class="info-title-email-wrapper">
+      <a class="icon-menu" id="desktopMenu">
+        ::before
+        <span class="icon-text">Menu</span>
+      </a> -->
+      <div class="site-title-wrapper">
+        <h1 class="site-title">
+          <div class="logo">
+            <a href="/">
+              <img src="images/TTidentity.png" alt="Tomorrow & Today">
+            </a>
+          </div>
+          <!--<div class="logo-image-title">
+            <a href="/">Tomorrow & Today</a>
+          </div>-->
+        </h1>
+      </div>
+      <!--<a id="info" class="icon-info">
+        <span clsas="icon-text">Info</span>
+      </a>
+      <div id="email">
+        <a class="icon-email">
+        ::before
+        <span class="icon-text">Email</span>
+        </a>
+      </div>
+      <div id="headerSearch">
+        <a class="icon-search" href="/search" data-source="template">
+          <span class="icon-text">Search</span>
+        </a>
+      </div>
+    </div> -->
+
+    <div class="nav-wrapper">
+      <ul class="cf">
+        ::before
+        <li class=" active-link">
+          <a href="/">Home</a>
+        </li>
+        <li class>
+          <a href="/blog/">Blog</a>
+        </li>
+        <li class>
+          <a href="/contact/">Contact</a>
+        </li>
+        ::after
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- <div id="logo">
+          <a href="..."><img src="" width="" height="">
           </a>
         </div>
+
+ end of navigation madness -->
 
   <div class="container">
     <div class="row">
@@ -80,7 +193,8 @@
         <h4>Tomorrow & Today</h4>
         <p>We're busy building an app that will provide customised discovery of the things you're interested in around London, but in the meantime <a href=http://www.tomorrowand.today/>sign up</a> for our newsletter to keep in touch and we'll let you know when it's ready!</p>
       </div>
-
+        
+        <!--Log in form -->
       <div class="one-half column" style="margin-top: 25%">
         <form id="login" action="login_check" method="post">
           <div class="input-wrapper">
@@ -102,6 +216,8 @@
 
           </div>
         </form>
+
+            <!-- Forgot password form-->
             <form id="forgot" class="hide" action="/login/password/request_submit" method="POST" novalidate>
               <div class="input-wrapper">
                 <label for="form_email"></label>
@@ -125,10 +241,10 @@
   </div>
 </div>
 <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
     <script src="js/angular.min.js"></script>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
-
+-->
 </body>
 </html>
