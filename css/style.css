@@ -1,0 +1,28 @@
+.hide {
+	display: none
+}
+
+
+
+.contact-wrapper {
+  position:fixed;
+  top:-125px;
+  left:0;
+  width:100%;
+  // z-index:-10;
+  visibility: hidden;
+  opacity:0;
+  .easeOutQuint(all, 0.4s);
+  .social-account-list {
+    margin-top:1em;
+  }
+}
+
+.contact-inner-wrapper {
+  width: @siteWidth;
+  margin: 0 auto;
+  font-size: 0.9em;
+  .address-phone-email a, .address-phone-email a:visited {
+    border-bottom: solid 1px;
+  }
+}
