@@ -35,9 +35,110 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!--Subscribe to newsletter (access from mail icon in header) -->
+  
 </head>
 <body>
+  <!-- Facebook script -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '933049683413631',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+// This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '{933049683413631}',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.2' // use version 2.2
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+
+
+
+<!--Subscribe to newsletter (access from mail icon in header) -->
   <div class="contact-wrapper">
     <div class="contact-inner-wrapper" style="margin-top: 166px;">
       <div class="... 12 columns ... locked layout" data-layout-label="Header Sign Up Block" data-type="block-field" data-updated-on="..." id="contactBlock">
@@ -196,6 +297,19 @@
         
         <!--Log in form -->
       <div class="one-half column" style="margin-top: 25%">
+        
+        <!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
         <form id="login" action="login_check" method="post">
           <div class="input-wrapper">
             <label for="_username"></label>
@@ -234,6 +348,34 @@
               </p>
 
           </form>
+
+          <div id="profile">
+            <div class="profile-content">
+              <div id="avatar">
+                <img class="avatar " src="https://www.gravatar.com/avatar/23b5a56e1817d019a4ffe01ddf355965?s=80&amp;d=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Ftypeform-media-static%2Fdefault-avatar.png" width="80" heigh="80">
+                  <span class="description tooltip" data-content="Using Gravatar.com you can associate your e-mail address: (elizabeth36@gmail.com) with a lovely picture of yourself or your cat." data-width="150"><a href="https://www.gravatar.com" target="_blank">Get / change Gravatar</a></span>
+
+                  <div class="module">
+                    <h3>
+                      <span id="data-alias">Liz</span>
+                    </h3>
+                    <span class="location">London, N1</span>
+                    <a class="edit-popup" data-template="tpl-user-change-name" href="#">Modify your name and location</a>
+                  </div>
+                  <div class="module">
+                    <h4 id="data-email">elizabeth36@gmail.com</h4>
+                    <span class="description">This is also your username</span>
+                    <a class="edit-popup" data-template="tpl-user-change-email" href="#">
+                      <img class="icon" src="....png" width="15" height="15">
+                      Change your email/username
+                    </a>
+                    <a class="edit-popup" data-template="tpl-user-change-password" href="#"><img class="icon" src="....png" width="15" height="15">Reset your password</a>
+                  </div>
+
+              </div>
+            </div>
+
+          </div>
         
       </div>
     

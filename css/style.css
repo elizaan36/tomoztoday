@@ -2,6 +2,11 @@
 	display: none
 }
 
+.profile-content {
+	display: none
+}
+
+
 .contact-wrapper {
   position:fixed;
   top:-125px;
@@ -294,4 +299,8 @@
   }
 }
 
-
+#profile #avatar .description {
+width: 80px;
+line-height: 12px;
+font-size: 11px;
+text-align: center;
