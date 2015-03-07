@@ -23,166 +23,45 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'
  rel='stylesheet' type='text/css'>
 
-  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <! CSS
+  <!-- CSS
   ––––––––––––––––––––––––––––––––––––––––––––––––––-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/TTfavicon1.ico">
 
   
 </head>
 <body>
-  <!-- Facebook script -->
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '933049683413631',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
-// This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '{933049683413631}',
-    cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.2' // use version 2.2
-  });
-
-  // Now that we've initialized the JavaScript SDK, we call 
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
-
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-
-  };
-
-  // Load the SDK asynchronously
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-</script>
-
-
-
-<!--Subscribe to newsletter (access from mail icon in header) -->
-  <div class="contact-wrapper">
-    <div class="contact-inner-wrapper" style="margin-top: 166px;">
-      <div class="... 12 columns ... locked layout" data-layout-label="Header Sign Up Block" data-type="block-field" data-updated-on="..." id="contactBlock">
-        <div class="row">
-          ::before
-          <div class="col 6 span-6">
-            <div class="block html" data-block-type="2" id="block...">
-              <div class="block-content">
-                <h3>SIGN UP - AND DISCOVER ART, EXCITEMENT AND WONDER AS IT HAPPENS</h3>
-                <p> "Our email newsletter delivers ridiculously fresh news, exclusive invites and sneak peeks into the art and design world in London, direct to your mailbox every week."
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 span-6">
-            <div class="form-block" data-block-type="9">
-              <div class="block-content">
-                <div class="form-wrapper">
-                  <div class="form-inner-wrapper">
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
   <!--Navigation-->
 <nav id="mobile-navigation" class="mobile-nav">
-  <!--MOBILE -->
+  <!--MOBILE - Use tympanus.net fullscreen overlay-->
   <div class="nav-wrapper" data-content-field="navigation-mobileNav">
     <ul>
       <li class=>
         <a href="/">Home</a>
       </li>
+      <li class=>
+        <a href="/upcoming/">Upcoming</a>
+      </li>
+      <li class=>
+        <a href="/nearby/">Nearby</a>
+      </li>
+      <!--<li class=>
+        <a href="/about/">About</a>
+      </li>-->
       <li class>
         <a href="/blog/">Blog</a>
       </li>
+      <!-- Social media links -->
       <li class>
         <a href="/contact/">Contact</a>
       </li>
@@ -191,202 +70,114 @@
 </nav>
 <div class="opacity-overlay"></div>
 
-<!--Not entirely sure about this bit 
-<div class="outer-wrapper">
-  
-    ::before
-    <div id="mobile-header">
-      <a class="icon-menu" id="mobileMenu"></a>
-<! comment the space between elements because science 
-          >
-    <div class="site-title-wrapper">
-    <h1 data-content-field="site-title" class="site-title">
-    <a href="/" class="home-link"> Tomorrow & Today</a>
-    </h1>
+
+
+
+<header class="header">
+      <div class="overlay"></div>
+      <!-- logo goes here -->
+    <div class="headerlogo">
+      <a href="/"><img src="images/TTidentity.png" height="100px">
+        </a>
     </div>
-  <! comment the space between elements because science 
-              >
-      <div class="info-email-wrapper">
-        <a id="info-mobile" class="icon-info">
-          <span class="icon-text">Info</span>
-        </a>
-        <div id="email-mobile">
-        <a class="icon-email">
-          <span class="icon-text">Email</span>
-        </a>
-        </div>
-        <div id="search-mobile">
-        <a class="icon-search" href="/search" data-source="template">
-          <span class="icon-text">Search</span>
-        </a>
-        </div>
+    </header>
 
-      </div>
-    </div>
-  
-</div> -->
+    <nav>
 
+      <!-- Make logo and log in appear here -->
+      <a href="#home" class="logo">T&T</a>
+      <a href="#today">Today</a>
+      <a href="#tomorrow">Tomorrow</a>
+      <a href="#future">Future</a>
+      <a href="#about">About</a>
 
-<!--main navigation -->
-<header id="header">
-  <nav class="main-nav">
-   <!-- <div class="info-title-email-wrapper">
-      <a class="icon-menu" id="desktopMenu">
-        ::before
-        <span class="icon-text">Menu</span>
-      </a> -->
-      <div class="site-title-wrapper">
-        <h1 class="site-title">
-          <div class="logo">
-            <a href="/">
-              <img src="images/TTidentity.png" alt="Tomorrow & Today">
-            </a>
+      <!-- Make search, map icons appear here-->
+
+    </nav>
+
+  <section id="today">
+      <div class="container">
+        
+        <div class="row">
+          <div class="one-half column" style="margin: 25%">
+            <img src="images/green_grains.png">
+            <h3>Event Title</h3>
+            <h2>Date</h2>
+            <p>Description</p>
           </div>
-          <!--<div class="logo-image-title">
-            <a href="/">Tomorrow & Today</a>
-          </div>-->
-        </h1>
-      </div>
-      <!--<a id="info" class="icon-info">
-        <span clsas="icon-text">Info</span>
-      </a>
-      <div id="email">
-        <a class="icon-email">
-        ::before
-        <span class="icon-text">Email</span>
-        </a>
-      </div>
-      <div id="headerSearch">
-        <a class="icon-search" href="/search" data-source="template">
-          <span class="icon-text">Search</span>
-        </a>
-      </div>
-    </div> -->
-
-    <div class="nav-wrapper">
-      <ul class="cf">
-        ::before
-        <li class=" active-link">
-          <a href="/">Home</a>
-        </li>
-        <li class>
-          <a href="/blog/">Blog</a>
-        </li>
-        <li class>
-          <a href="/contact/">Contact</a>
-        </li>
-        ::after
-      </ul>
-    </div>
-  </nav>
-</header>
-
-<!-- <div id="logo">
-          <a href="..."><img src="" width="" height="">
-          </a>
+          
         </div>
+      </div>
+  </section>
 
- end of navigation madness -->
+  <section id="tomorrow">
+      <div class="container">
 
+        <div class="row">
+          <div class="one-half column" style="margin: 25%">
+            <img src="images/green_grains.png">
+            <h3>Event Title</h3>
+            <h2>Date</h2>
+            <p>Description</p>
+          </div>
+          
+        </div>
+      </div>
+  </section>
+
+  <section id="future">
+      <div class="container">
+        
+        <div class="row">
+          <div class="one-half column" style="margin: 25%">
+            <img src="images/green_grains.png">
+            <h3>Event Title</h3>
+            <h2>Date</h2>
+            <p>Description</p>
+          </div>
+          
+        </div>
+      </div>
+  </section>
+
+
+
+  <section id="about">
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Tomorrow & Today</h4>
-        <p>We're busy building an app that will provide customised discovery of the things you're interested in around London, but in the meantime <a href=http://www.tomorrowand.today/>sign up</a> for our newsletter to keep in touch and we'll let you know when it's ready!</p>
+      <div class="one-half column" style="margin: 25%">
+        <h4>Tomorrow & Today is a jazzy spaceship.</h4>
+        <p><a href=http://www.tomorrowand.today/>Sign up</a> for our newsletter!</p>
       </div>
-        
-        <!--Log in form -->
-      <div class="one-half column" style="margin-top: 25%">
-        
-        <!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
-
-        <form id="login" action="login_check" method="post">
-          <div class="input-wrapper">
-            <label for="_username"></label>
-            <input type="text" id="_username" name="_username" value placeholder="E-mail" required style="background: rgb(231, 248, 231);">
-          </div>
-          <div class="input-wrapper">
-            <label for="_password"></label>
-            <input id="_password" type="password" name="_password" placeholder="Password" required class="ckpass_detect_item ckpass_pass_link_password" style="cursor: auto; background: url(chrome-extension://chgfefjpcobfbnpmiokfjjaglahmnded/icons/logo-16.png) 99% 50% no-repeat scroll rgb(231, 248, 231);">
-          </div>
-          <div>
-          <a id="login-forgot" class="login-forgot">I forgot my password</a>
-          </div>
-          <button type="submit" id="btnlogin" class="admin-button">
-            <p>Log in to Tomorrow & Today</p>
-          </button>
-          
-          <div id="error">
-
-          </div>
-        </form>
-
-            <!-- Forgot password form-->
-            <form id="forgot" class="hide" action="/login/password/request_submit" method="POST" novalidate>
-              <div class="input-wrapper">
-                <label for="form_email"></label>
-                <input type="email" id="form_email" name="form[email]" required="required" placeholder="E-mail" class="non-blank">
-              </div>
-              <p class="title">Forgot your password? Don't panic!</p>
-              <p>
-                "Just enter the email address associated with your account, and we'll send you an e-mail with instruction on how to reset your password."
-              </p>
-              <p>
-                <input type="hidden" id="form__token" name "form[_token]" value=".?.">
-                <button type="submit" id="btnrequest" class="admin-button">Email me instructions</button>
-                <input type="button" id="btncancel" class="admin-button alt" style="border:none" value="Cancel">
-              </p>
-
-          </form>
-
-          <div id="profile">
-            <div class="profile-content">
-              <div id="avatar">
-                <img class="avatar " src="https://www.gravatar.com/avatar/23b5a56e1817d019a4ffe01ddf355965?s=80&amp;d=https%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Ftypeform-media-static%2Fdefault-avatar.png" width="80" heigh="80">
-                  <span class="description tooltip" data-content="Using Gravatar.com you can associate your e-mail address: (elizabeth36@gmail.com) with a lovely picture of yourself or your cat." data-width="150"><a href="https://www.gravatar.com" target="_blank">Get / change Gravatar</a></span>
-
-                  <div class="module">
-                    <h3>
-                      <span id="data-alias">Liz</span>
-                    </h3>
-                    <span class="location">London, N1</span>
-                    <a class="edit-popup" data-template="tpl-user-change-name" href="#">Modify your name and location</a>
-                  </div>
-                  <div class="module">
-                    <h4 id="data-email">elizabeth36@gmail.com</h4>
-                    <span class="description">This is also your username</span>
-                    <a class="edit-popup" data-template="tpl-user-change-email" href="#">
-                      <img class="icon" src="....png" width="15" height="15">
-                      Change your email/username
-                    </a>
-                    <a class="edit-popup" data-template="tpl-user-change-password" href="#"><img class="icon" src="....png" width="15" height="15">Reset your password</a>
-                  </div>
-
-              </div>
-            </div>
-
-          </div>
-        
-      </div>
-    
     </div>
   </div>
-</div>
+  </section>
+      
+  
+
+
+<footer>
+      <div class="one-half column" style="margin-top: 2.7%">
+        <p>Made with loveicon in Hoxton. Tomorrow and Today &copy; 2015</p>
+      </div>
+
+      
+        <p>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      <!-- Newsletter and Social media links -->
+     
+  </p>
+  
+
+    </footer>
+
 <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/angular.min.js"></script>
     <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
--->
+
 </body>
 </html>
