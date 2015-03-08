@@ -53,16 +53,15 @@
 // });
 
 
-
 // Little Lunches JS 
 
 // Make sure our code only runs when the page ready - because our scripts are in the head of the html page
 
-$(document).ready( function(){
+// $(document).ready( function(){
 	// All of our code goes within here - won't run until the page is ready
 
 	// trigger a CSS transition from JS - by removing a class
-	$('h1').removeClass('pre-animation');
+	// $('h1').removeClass('pre-animation');
 
 // Screate smooth scrolling navigation
 $('nav a').on('click', function(){
@@ -200,7 +199,7 @@ $('nav a').on('click', function(){
 
 });
 
-});
+// });
 
 
 
