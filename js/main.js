@@ -104,6 +104,7 @@ $('nav a').on('click', function(){
 		$('.macbook').css('left', moveImagesBy  );
 		$('.iphone').css('right', moveImagesBy );
 
+
 	});
 
 	// Create a fixed navigation when we scroll into the intro section
@@ -135,6 +136,8 @@ $('nav a').on('click', function(){
 
 		// have an animation when we reach the about section
 		$('#' + section).find('.fadeInUp').removeClass('fadeInUp');
+
+		
 
 	}, { offset : 150 });
 

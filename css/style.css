@@ -31,7 +31,7 @@ nav.fixed {
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
   z-index: 30;
 }
 
@@ -68,30 +68,124 @@ footer a {
 .logo {
   margin: 15px 0;
   z-index: 20;
-  color: #ffffff;
+  
   opacity: 1;
   transform: translateY(0);
   transition: all 0.4s ease-in-out;
   font-size: 16px;
   letter-spacing: 2px;
   line-height: 2.6;
-  color: #393939;
-  background-color: rgba(0,0,0,0);
+  
+  background-color: rgba(255,255,255,1);
   text-transform: uppercase;
-  border: 4px solid #393939;
+  border-bottom: 1px rgba(0,0,0,0.2);
   position: absolute;
-  left: 10%;
-  padding: 0 12px 0 14px;
+  left: 5%;
+  padding: 0 20px 0 20px;
 }
 
-.headerlogo {
+.header {
+  text-align: left;
+  padding: 200px 0 200px 0;
+  
+  position: relative;
+  
+
+}
+
+
+
+
+header h1 {
+
+  
   z-index: 20;
   color: #ffffff;
   opacity: 1;
   transform: translateY(0);
   transition: all 0.4s ease-in-out;
-  background-color: rgba(0,0,0,0);
-  position: relative;
-  top: 10%;
+  color: #000;
+  
+  padding: 0 20% 0 20%;
 
+
+  }
+
+#mc_embed_signup {
+z-index: 20;
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
+  color: #000;
+  text-align: left;
+  padding: 0 20% 0 20%;
+
+  }
+
+  #mc-embedded-subscribe-button {
+height: 68px;
+
+  }
+
+  .email {
+  width: 350px;
+    color: #5459AF;
+  
+  display: inline-block;
+  height: 68px;
+  padding: 0 30px;
+  
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: none;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; 
+    
+  }
+
+  .button {
+    width: 350px;
+    color: #5459AF;
+  
+  display: inline-block;
+  height: 68px;
+  padding: 0 30px;
+  
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: none;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; 
+  }
+
+.button:focus {
+  color: #fff;
+  border-color: #888;
+  outline: 0; 
+  background-color: #5459AF;
+}
+
+
+.button:hover {
+  color: #fff;
+  border-color: #888;
+  outline: 0; 
+  background-color: #5459AF;
 }
